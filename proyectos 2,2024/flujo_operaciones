@@ -1,0 +1,14 @@
+// Flujo de operaciones
+digraph {
+	Inicio [label=Inicio]
+	Fin [label=Fin]
+	CrearCliente [label="Crear Cliente"]
+	EditarCliente [label="Editar Cliente"]
+	EliminarCliente [label="Eliminar Cliente"]
+	ListarClientes [label="Listar Clientes"]
+	Inicio -> CrearCliente [label="Ingresar Datos"]
+	CrearCliente -> EditarCliente [label="Modificar Datos"]
+	EditarCliente -> EliminarCliente [label="Si cliente existe"]
+	EliminarCliente -> ListarClientes [label="Cliente Eliminado"]
+	ListarClientes -> Fin [label="Mostrar Todos"]
+}
